@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>image</title>
+        <link href="style.css" type="text/css" rel=stylesheet>
+    </head>
+    <body>
+        <p id="dateTime"></p>
+        <script>
+            var d = new Date();
+            var timeOfDay = "";
+            if (d.getHours() < 12) {
+                timeOfDay = "morning"
+            }
+            else if (d.getHours() < 18) {
+                timeOfDay = "afternoon"
+            }
+            else {
+                timeOfDay = "evening"
+            }
+        document.getElementById("dateTime").innerHTML = "it is "+d.getHours()+" in the "+timeOfDay+", and you're looking at image"
+        </script>
+        <div class="customImage">
+        <a href="newpage.html">
+        <input type="image" src="img/image.png" name="button" class="btTxt submit" id="button"/>
+        </a>
+        </div>
+    </body>
+</html>
